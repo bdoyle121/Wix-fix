@@ -1,14 +1,8 @@
-/* Combined styling for all pages */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
+body {
     font-family: 'Poppins', sans-serif;
     background-color: #A8DAD9;
-    color: #333;
+    margin: 0;
+    color: #111;
   }
   
   .navbar {
@@ -17,13 +11,22 @@
     align-items: center;
     padding: 1rem 2rem;
     background-color: #A8DAD9;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   
-  .nav-left a, .nav-right a {
-    margin: 0 10px;
+  .nav-left a,
+  .nav-right a {
+    margin: 0 12px;
     text-decoration: none;
-    font-weight: bold;
-    color: #333;
+    font-weight: 600;
+    font-size: 18px;
+    color: #222;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-left a:hover,
+  .nav-right a:hover {
+    color: #F38068;
   }
   
   .nav-right img {
@@ -37,21 +40,17 @@
     flex-wrap: wrap;
     align-items: center;
     padding: 2rem;
+    background-color: #A8DAD9;
   }
   
-  .left-column {
-    flex: 1;
-    padding: 1rem;
-  }
-  
+  .left-column,
   .right-column {
     flex: 1;
     padding: 1rem;
-    text-align: center;
   }
   
   .event-logo {
-    max-width: 300px;
+    max-width: 280px;
     margin-bottom: 1rem;
   }
   
@@ -64,91 +63,66 @@
   h1 {
     font-size: 2.5rem;
     color: #FFE58A;
-    margin: 1rem 0 0.5rem;
+    margin-bottom: 1rem;
   }
   
   p {
-    font-size: 1.25rem;
-    color: #FFE58A;
-    margin-bottom: 0.5rem;
-  }
-  
-  .buttons {
-    margin-top: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
   
   .buttons a {
-    display: inline-block;
-    padding: 0.75rem 1.25rem;
-    margin: 0.5rem;
     background-color: #F38068;
     color: #fff;
-    border-radius: 5px;
     text-decoration: none;
-  }
-  
-  .hosted-by {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .hosted-by h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .host-logos img {
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
     margin: 0.5rem;
-    height: 60px;
+    display: inline-block;
+    font-weight: bold;
   }
   
   .content-section {
-    max-width: 900px;
-    margin: 4rem auto;
-    padding: 2rem;
-    background-color: #fff;
+    padding: 3rem 2rem;
+    max-width: 960px;
+    margin: auto;
+    background: #fff;
+    margin-bottom: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   }
   
   .content-section h1 {
-    color: #333;
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: #222;
   }
   
-  .content-section p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+  ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
   }
   
   @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .nav-left, .nav-right {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
     .hero {
       flex-direction: column;
       text-align: center;
     }
-  
-    .nav-left, .nav-right {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
+    .event-logo {
+      margin: 0 auto 1rem;
     }
-  
-    .nav-left a, .nav-right a {
-      margin: 0.5rem;
-    }
-  
-    h1 {
-      font-size: 2rem;
-    }
-  
-    p {
-      font-size: 1rem;
-    }
-  
-    .host-logos img {
-      height: 40px;
+    .content-section {
+      padding: 2rem 1rem;
     }
   }
+  
